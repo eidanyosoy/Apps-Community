@@ -20,6 +20,14 @@
         extport4: '67'
         intport5: '68'
         extport5: '68'
+        intport6: '53/udp'
+        extport6: '53/udp'
+        intport7: '67/udp'
+        extport7: '67/udp'
+        intport8: '68/udp'
+        extport8: '68/udp'
+        intport9: '80'
+        extport9: '85'
         image: 'adguard/adguardhome'
 
     # CORE (MANDATORY) ############################################################
@@ -31,7 +39,7 @@
       set_fact:
         pg_labels:
           traefik.enable: 'true'
-          traefik.port: '{{intport}}'
+          traefik.port: '{{intport9}}'
           traefik.frontend.auth.forward.address: '{{gauth}}'
           traefik.frontend.rule: 'Host:{{pgrole}}.{{domain.stdout}}{{tldset}}{{cname}}'
           traefik.frontend.headers.SSLHost: '{{domain.stdout}}'
@@ -70,6 +78,10 @@
           - '{{ports.stdout}}{{extport3}}:{{intport3}}'
           - '{{ports.stdout}}{{extport4}}:{{intport4}}'
           - '{{ports.stdout}}{{extport5}}:{{intport5}}'
+          - '{{ports.stdout}}{{extport6}}:{{intport6}}'
+          - '{{ports.stdout}}{{extport7}}:{{intport7}}'
+          - '{{ports.stdout}}{{extport8}}:{{intport8}}'
+          - '{{ports.stdout}}{{extport9}}:{{intport9}}'
         volumes: '{{pg_volumes}}'
         env: '{{pg_env}}'
         restart_policy: unless-stopped
