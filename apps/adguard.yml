@@ -10,6 +10,16 @@
         pgrole: 'adguard'
         intport: '443'
         extport: '444'
+        intport1: '3000'
+        extport1: '3000'
+        intport2: '853'
+        extport2: '853'
+        intport3: '53'
+        extport3: '53'
+        intport4: '67'
+        extport4: '67'
+        intport5: '68'
+        extport5: '68'
         image: 'adguard/adguardhome'
 
     # CORE (MANDATORY) ############################################################
