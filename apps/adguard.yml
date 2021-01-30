@@ -8,8 +8,8 @@
     - name: 'Set Known Facts'
       set_fact:
         pgrole: 'adguard'
-        intport: '443'
-        extport: '444'
+        intport: '80'
+        extport: '85'
         intport1: '3000'
         extport1: '3000'
         intport2: '853'
@@ -26,8 +26,6 @@
         extport7: '67/udp'
         intport8: '68/udp'
         extport8: '68/udp'
-        intport9: '80'
-        extport9: '85'
         image: 'adguard/adguardhome'
 
     # CORE (MANDATORY) ############################################################
@@ -81,7 +79,6 @@
           - '{{ports.stdout}}{{extport6}}:{{intport6}}'
           - '{{ports.stdout}}{{extport7}}:{{intport7}}'
           - '{{ports.stdout}}{{extport8}}:{{intport8}}'
-          - '{{ports.stdout}}{{extport9}}:{{intport9}}'
         volumes: '{{pg_volumes}}'
         env: '{{pg_env}}'
         restart_policy: unless-stopped
