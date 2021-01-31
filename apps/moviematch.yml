@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Title:      flaresolverr
+# Title:      moviematch
 # Author(s):  eidanyosoy
 # URL:        https://github.com/FlareSolverr/FlareSolverr
 ################################################################################
@@ -11,10 +11,10 @@
     # FACTS #######################################################################
     - name: 'Set Known Facts'
       set_fact:
-        pgrole: 'flaresolverr'
-        intport: '8191'
-        extport: '8191'
-        image: 'flaresolverr/flaresolverr:latest'
+        pgrole: 'moviematch'
+        intport: '8000'
+        extport: '8601'
+        image: 'lukechannings/moviematch'
 
     # CORE (MANDATORY) ############################################################
     - name: 'Including cron job'
@@ -42,16 +42,18 @@
       set_fact:
         pg_volumes:
           - '/etc/localtime:/etc/localtime:ro'
-          - '/opt/appdata/{{pgrole}}:/home/flaresolverr'
-          - '{{path.stdout}}:{{path.stdout}}'
+          - '/opt/appdata/{{pgrole}}:/config'
+          - '/opt/appdata/{{pgrole}}:/storage'
 
     - name: 'Setting {{pgrole}} ENV'
       set_fact:
         pg_env:
           PUID: '1000'
           PGID: '1000'
-          CAPTCHA_SOLVER: 'hcaptcha-solver'
-
+          LOG_LEVEL: ''
+          PLEX_TOKEN: ''
+          PLEX_URL: ''
+          TZ: 'America/New_York'
     # MAIN DEPLOYMENT #############################################################
     - name: 'Deploying {{pgrole}}'
       docker_container:
