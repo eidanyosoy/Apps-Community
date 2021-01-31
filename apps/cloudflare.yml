@@ -39,8 +39,8 @@
           CF_APIKEY: 'your.global.apikey'
           CF_APITOKEN: ''
           CF_APITOKEN_ZONE: ''
-          CF_HOSTS: 'test.example.com;test.foobar.com;test2.foobar.com'
-          CF_ZONES: 'example.com;foobar.com;foobar.com'
+          CF_HOSTS: 'plex.yourdomain.com;radarr.yourdomain.com;sonarr.yourdomain.com'
+          CF_ZONES: 'yourdomain.com'
           CF_RECORDTYPES: 'A;A;AAAA'
 
     # MAIN DEPLOYMENT #############################################################
