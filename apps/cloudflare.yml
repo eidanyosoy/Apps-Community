@@ -22,7 +22,7 @@
       set_fact:
         pg_volumes:
           - '/opt/appdata/{{pgrole}}/config:/config'
-          - /etc/localtime:/etc/localtime:ro
+          - '/etc/localtime:/etc/localtime:ro'
     - name: 'Setting {{pgrole}} ENV'
       set_fact:
         pg_env:
