@@ -32,7 +32,7 @@
           UMASK: '002'
           ARGS: ''
           INTERNAL: '300'
-          DETECTION_MODE: 'dig-whoami.cloudflare'
+          DETECTION_MODE: 'curl-seeip.org'
           LOG_LEVEL: '3'
           APPRISE: ''
           CF_USER: 'your.cf.email@example.com'
