@@ -50,9 +50,9 @@
         pg_env:
           PUID: '1000'
           PGID: '1000'
-          LOG_LEVEL: ''
-          PLEX_TOKEN: ''
-          PLEX_URL: ''
+          LOG_LEVEL: 'DEBUG'
+          PLEX_TOKEN: 'YOURPLEXTOKENHERE'
+          PLEX_URL: 'plex.yoururl.com'
           TZ: 'America/New_York'
     # MAIN DEPLOYMENT #############################################################
     - name: 'Deploying {{pgrole}}'
