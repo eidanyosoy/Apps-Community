@@ -13,8 +13,8 @@
     - name: 'Set Known Facts'
       set_fact:
         pgrole: 'ersatztv'
-        intport: '8989'
-        extport: '8989'
+        intport: '8409'
+        extport: '8409'
         image: 'jasongdove/ersatztv'
 
     # CORE (MANDATORY) ############################################################
