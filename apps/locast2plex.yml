@@ -14,7 +14,7 @@
       set_fact:
         pgrole: 'locast2plex'
         intport: '6077'
-        extport: '12345'
+        extport: '6077'
         image: 'tgorg/locast2plex'
 
     # CORE (MANDATORY) ############################################################
