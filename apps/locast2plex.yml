@@ -13,8 +13,8 @@
     - name: 'Set Known Facts'
       set_fact:
         pgrole: 'locast2plex'
-        intport: '12345'
-        extport: '6077'
+        intport: '6077'
+        extport: '12345'
         image: 'tgorg/locast2plex'
 
     # CORE (MANDATORY) ############################################################
