@@ -17,13 +17,13 @@
         extport: '7777'
     # CORE (MANDATORY) ############################################################
     - name: 'Including main job'
-      include_tasks: '/opt/coreapps/apps/_core.yml'
+      include_tasks: './core.yml'
 
     - name: 'Including cleaner job'
-      include_tasks: '/opt/coreapps/apps/cleaner.yml'
+      include_tasks: './cleaner.yml'
 
     - name: 'Including key and rclone job'
-      include_tasks: '/opt/coreapps/apps/key.yml'
+      include_tasks: './key.yml'
 
     - name: 'Remove Obsolete Cron'
       include_tasks: './cron.yml'
@@ -61,11 +61,11 @@
           PUID: '1000'
           PGID: '1000'
           TZ: '${TZ}'
-          DISABLE_UNIONFS_CHOWN: 'false'
-          DISABLE_TDRIVE1: 'false'
+          DISABLE_UNIONFS_CHOWN: 'true'
+          DISABLE_TDRIVE1: 'true'
           DISABLE_TDRIVE2: 'true'
-          DISABLE_GDRIVE: 'false'
-          DISABLE_MERGERFS: 'false'
+          DISABLE_GDRIVE: 'true'
+          DISABLE_MERGERFS: 'true'
 
      ########## DEPLOYMENT ##########
 
