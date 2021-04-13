@@ -61,18 +61,18 @@
           PUID: '1000'
           PGID: '1000'
           TZ: '${TZ}'
-          DISABLE_UNIONFS_CHOWN: 'true'
-          DISABLE_TDRIVE1: 'true'
+          DISABLE_UNIONFS_CHOWN: 'false'
+          DISABLE_TDRIVE1: 'false'
           DISABLE_TDRIVE2: 'true'
-          DISABLE_GDRIVE: 'true'
-          DISABLE_MERGERFS: 'true'
+          DISABLE_GDRIVE: 'false'
+          DISABLE_MERGERFS: 'false'
 
      ########## DEPLOYMENT ##########
 
     - name: 'Deploying {{pgrole}}'
       docker_container:
         name: '{{pgrole}}'
-        image: 'smashingtags/rclone-mergerfs'
+        image: 'eidanyosoy/uploader:latest'
         pull: yes
         published_ports:
           - '{{ports.stdout}}{{extport}}:{{intport}}'
