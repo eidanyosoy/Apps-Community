@@ -20,10 +20,10 @@
       include_tasks: '/opt/coreapps/apps/_core.yml'
 
     - name: 'Including cleaner job'
-      include_tasks: './cleaner.yml'
+      include_tasks: '/opt/coreapps/apps/cleaner.yml'
 
     - name: 'Including key and rclone job'
-      include_tasks: './key.yml'
+      include_tasks: '/opt/coreapps/apps/key.yml'
 
     - name: 'Remove Obsolete Cron'
       include_tasks: './cron.yml'
