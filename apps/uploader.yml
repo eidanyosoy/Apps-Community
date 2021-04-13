@@ -17,7 +17,7 @@
         extport: '7777'
     # CORE (MANDATORY) ############################################################
     - name: 'Including main job'
-      include_tasks: './core.yml'
+      include_tasks: '/opt/coreapps/apps/_core.yml'
 
     - name: 'Including cleaner job'
       include_tasks: './cleaner.yml'
