@@ -72,7 +72,7 @@
     - name: 'Deploying {{pgrole}}'
       docker_container:
         name: '{{pgrole}}'
-        image: 'eidanyosoy/uploader:latest'
+        image: 'eidanyosoy/uploader'
         pull: yes
         published_ports:
           - '{{ports.stdout}}{{extport}}:{{intport}}'
