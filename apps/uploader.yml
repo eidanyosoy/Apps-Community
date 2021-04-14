@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Title:      Docker Uploader
+# Title:      Docker Uploader 
 # Author(s):  PhyskX
 # CoAuthot:   MrDoob
 # GNU:        General Public License v3.0
@@ -24,7 +24,7 @@
 
     - name: 'Including key and rclone job'
       include_tasks: './key.yml'
-
+      
     - name: 'Remove Obsolete Cron'
       include_tasks: './cron.yml'
 
@@ -34,7 +34,6 @@
         pg_labels:
           traefik.enable: 'true'
           traefik.port: '{{intport}}'
-          traefik.frontend.auth.forward.address: '{{gauth}}'
           traefik.frontend.auth.forward.address: '{{gauth}}'
           traefik.frontend.rule: 'Host:{{pgrole}}.{{domain.stdout}}'
           traefik.frontend.headers.SSLHost: '{{domain.stdout}}'
