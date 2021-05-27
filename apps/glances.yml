@@ -43,6 +43,7 @@
           traefik.frontend.rule: 'Host:{{pgrole}}.{{domain.stdout}},{{tldset}}'
           traefik.frontend.headers.SSLProxyHeaders: 'X-Forwarded-Proto: https'
           traefik.frontend.headers.SSLRedirect: 'true'
+          dockupdater.enable: 'true'
 
     - name: 'Setting PG Volumes'
       set_fact:
