@@ -14,7 +14,7 @@
       set_fact:
         pgrole: 'unmanic'
         intport: '8888'
-        extport: '7777'
+        extport: '7787'
         image: 'josh5/unmanic:latest'
 
     # CORE (MANDATORY) ############################################################
