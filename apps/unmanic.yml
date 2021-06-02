@@ -46,7 +46,6 @@
           - '/opt/appdata/{{pgrole}}:/config'
           - '/tmp/unmanic:/tmp/unmanic'
           - '{{path.stdout}}:{{path.stdout}}'
-          - '/mnt:/mnt'
           
     - name: 'Setting PG ENV'
       set_fact:
